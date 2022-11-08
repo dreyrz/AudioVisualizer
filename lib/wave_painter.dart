@@ -16,7 +16,7 @@ class WavePainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     Paint paint = Paint()
       ..color = Colors.green
-      ..strokeWidth = 1.0
+      ..strokeWidth = 2.0
       ..style = PaintingStyle.stroke;
 
     if (samples.isEmpty) {
@@ -39,7 +39,7 @@ class WavePainter extends CustomPainter {
 
     for (int i = 0; i < size.width; i++) {
       if (i % 3 == 0) {
-        final dy = size.height * 0.001 * samples[i] / 100;
+        final dy = size.height * 0.001 * samples[i] / 60;
         final point = Offset(i.toDouble(), dy);
         points.add(point);
       }

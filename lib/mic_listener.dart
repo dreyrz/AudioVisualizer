@@ -29,7 +29,7 @@ class MicListener implements IMicListener {
       audioSource: AudioSource.DEFAULT,
       sampleRate: 16000,
       channelConfig: ChannelConfig.CHANNEL_IN_MONO,
-      audioFormat: MicListener.audioFormat,
+      audioFormat: AudioFormat.ENCODING_PCM_16BIT,
     );
     _isRecording = true;
 
